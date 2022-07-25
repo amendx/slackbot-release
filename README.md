@@ -5,7 +5,9 @@ This GitHub Action sends a rich-text notification to your Slack channel when the
 We use [mack](https://github.com/tryfabric/mack)  to render the body of the release as Slack blocks.
 
 <img width="782" alt="Design Master" src="https://user-images.githubusercontent.com/30783877/180804836-f2644f6f-ff79-4dd1-b3c9-04f6a56f91c1.png">
+
 # Usage
+
 ## Instructions
 
 - [Create a Slack app](https://api.slack.com/apps/new) called "Release Bot"
@@ -43,13 +45,14 @@ Install the dependencies
 $ npm install
 ```
 Build the typescript and package it for distribution
+
 ```bash
 $ npm run build && npm run package
 ```
-...
-```
+
 
 ## Releasing
+
 Cut a new release
 
 ```bash
