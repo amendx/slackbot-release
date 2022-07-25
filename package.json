@@ -1,7 +1,7 @@
 {
   "name": "slackbot-release",
   "version": "0.0.1",
-  "description": "Notify Slack on Changelog",
+  "description": "Slackbot on release",
   "main": "lib/main.js",
   "scripts": {
     "build": "tsc",
@@ -21,28 +21,28 @@
     "node",
     "setup"
   ],
-  "author": "amendx && instantish",
+  "author": "amendx",
   "license": "MIT",
   "dependencies": {
     "@actions/core": "^1.6.0",
     "@actions/github": "^5.0.1",
-    "@instantish/mack": "^1.2.0",
-    "@octokit/webhooks": "^9.23.0",
+    "@tryfabric/mack": "^1.2.0",
+    "@octokit/webhooks": "^10.0.9",
     "@slack/types": "^2.4.0",
     "@slack/web-api": "^6.7.1",
     "axios": "^0.26.1"
   },
   "devDependencies": {
-    "@types/node": "^16.10.5",
+    "@types/node": "^18.6.1",
     "@types/sinon": "^10.0.11",
     "@typescript-eslint/parser": "^5.19.0",
-    "@vercel/ncc": "^0.33.4",
+    "@vercel/ncc": "^0.34.0",
     "eslint": "8.20.0",
     "eslint-plugin-github": "^4.3.6",
     "js-yaml": "^4.1.0",
-    "prettier": "2.6.2",
+    "prettier": "2.7.1",
     "release-it": "^15.1.4",
-    "sinon": "^13.0.1",
+    "sinon": "^14.0.0",
     "typescript": "^4.7.4"
   }
 }

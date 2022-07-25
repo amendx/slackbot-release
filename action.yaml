@@ -1,5 +1,5 @@
-name: 'Slackbot changes on changelog'
-description: 'Notify a Slack channel when there is changelog updates'
+name: 'Slackbot on release'
+description: 'Notify a Slack channel when there is a new release'
 branding:
   icon: 'book'
   color: 'blue'
