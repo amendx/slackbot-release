@@ -1,0 +1,13 @@
+name: 'Slackbot changes on changelog'
+description: 'Notify a Slack channel when there is changelog updates'
+branding:
+  icon: 'book'
+  color: 'blue'
+author: 'amendx'
+inputs:
+  slack_webhook_url: # change this
+    required: true
+    description: 'The webhook URL for the Slack channel'
+runs:
+  using: 'node16'
+  main: 'dist/index.js'

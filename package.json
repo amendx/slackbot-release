@@ -1,0 +1,48 @@
+{
+  "name": "slackbot-release",
+  "version": "0.0.1",
+  "description": "Notify Slack on Changelog",
+  "main": "lib/main.js",
+  "scripts": {
+    "build": "tsc",
+    "format": "prettier --write '**/*.ts'",
+    "format-check": "prettier --check '**/*.ts'",
+    "lint": "eslint src/**/*.ts",
+    "package": "ncc build --source-map --license licenses.txt",
+    "all": "npm run build && npm run format && npm run lint && npm run package",
+    "release": "release-it"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amendx/slackbot-release.git"
+  },
+  "keywords": [
+    "actions",
+    "node",
+    "setup"
+  ],
+  "author": "amendx && instantish",
+  "license": "MIT",
+  "dependencies": {
+    "@actions/core": "^1.6.0",
+    "@actions/github": "^5.0.1",
+    "@instantish/mack": "^1.2.0",
+    "@octokit/webhooks": "^9.23.0",
+    "@slack/types": "^2.4.0",
+    "@slack/web-api": "^6.7.1",
+    "axios": "^0.26.1"
+  },
+  "devDependencies": {
+    "@types/node": "^16.10.5",
+    "@types/sinon": "^10.0.11",
+    "@typescript-eslint/parser": "^5.19.0",
+    "@vercel/ncc": "^0.33.4",
+    "eslint": "8.20.0",
+    "eslint-plugin-github": "^4.3.6",
+    "js-yaml": "^4.1.0",
+    "prettier": "2.6.2",
+    "release-it": "^15.1.4",
+    "sinon": "^13.0.1",
+    "typescript": "^4.7.4"
+  }
+}
