@@ -27,7 +27,7 @@
     "@actions/core": "^1.6.0",
     "@actions/github": "^5.0.1",
     "@instantish/mack": "^1.2.0",
-    "@octokit/webhooks": "^9.23.0",
+    "@octokit/webhooks": "^10.6.0",
     "@slack/types": "^2.4.0",
     "@slack/web-api": "^6.7.1",
     "axios": "^0.26.1"
