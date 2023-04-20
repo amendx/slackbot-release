@@ -22,13 +22,13 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.notifyChangelog = void 0;
 const axios_1 = __importDefault(__nccwpck_require__(6545));
 const mack_1 = __nccwpck_require__(4260);
-function notifyChangelog({ slackWebhookUrl, release, repo }) {
+function notifyChangelog({ title, slackWebhookUrl, release, repo }) {
     return __awaiter(this, void 0, void 0, function* () {
         const introBlock = {
             type: 'header',
             text: {
                 type: 'plain_text',
-                text: `🎉 [CHANGELOG]: ${release.name}`
+                text: `🎉 [${title}]: ${release.name}`
             }
         };
         const linkBlock = {
@@ -96,6 +96,7 @@ function run() {
     return __awaiter(this, void 0, void 0, function* () {
         try {
             core.debug(`Sending notification...`);
+            const title = core.getInput('title');
             const slackWebhookUrl = core.getInput('slack_webhook_url');
             const context = github.context;
             const { eventName, repo } = context;
@@ -104,6 +105,7 @@ function run() {
             }
             const payload = context.payload;
             yield (0, changelog_notification_1.notifyChangelog)({
+                title,
                 slackWebhookUrl,
                 release: payload.release,
                 repo

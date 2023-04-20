@@ -6,6 +6,7 @@ import {notifyChangelog} from './changelog-notification'
 async function run(): Promise<void> {
   try {
     core.debug(`Sending notification...`)
+    const title: string = core.getInput('title')
     const slackWebhookUrl: string = core.getInput('slack_webhook_url')
 
     const context = github.context
@@ -15,6 +16,7 @@ async function run(): Promise<void> {
     }
     const payload = context.payload as ReleaseReleasedEvent
     await notifyChangelog({
+      title,
       slackWebhookUrl,
       release: payload.release,
       repo

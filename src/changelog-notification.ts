@@ -15,12 +15,14 @@ interface Release {
 }
 
 interface ChangelogParameters {
+  title: string
   slackWebhookUrl: string
   release: Release
   repo: Repository
 }
 
 export async function notifyChangelog({
+  title,
   slackWebhookUrl,
   release,
   repo
@@ -29,7 +31,7 @@ export async function notifyChangelog({
     type: 'header',
     text: {
       type: 'plain_text',
-      text: `🎉 [CHANGELOG]: ${release.name}`
+      text: `🎉 [${title}]: ${release.name}`
     }
   }
   const linkBlock: SectionBlock = {
