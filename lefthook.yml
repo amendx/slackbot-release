@@ -1,0 +1,30 @@
+skip_output:
+  - execution
+  - meta
+  - success
+
+pre-commit:
+  parallel: true
+  commands:
+    lint:
+      glob: '*.ts'
+      run: npm run lint {staged_files}
+    build:
+      run: npm run build; npm run package; git add dist/
+pre-push:
+  parallel: true
+  scripts:
+    branch_validation.sh:
+      runner: bash
+post-checkout: &post-actions
+  parallel: true
+  commands:
+    git pull:
+      skip:
+        - rebase
+        - merge
+      run: git pull
+    yarn install:
+      run: npm install
+post-merge: *post-actions
+post-rewrite: *post-actions
