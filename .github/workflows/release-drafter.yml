@@ -16,7 +16,7 @@ jobs:
       # write permission is required for autolabeler
       # otherwise, read permission is required at least
       pull-requests: write
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     steps:
       - name: Calendar Version
         id: calver
