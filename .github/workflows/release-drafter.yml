@@ -20,7 +20,7 @@ jobs:
     steps:
       - name: Calendar Version
         id: calver
-        uses: emm035/calver@v1.1.1
+        uses: QUIS-de/calver@2023.8.0
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           create_tag: false
