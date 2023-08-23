@@ -5,6 +5,10 @@ branding:
   color: 'black'
 author: 'amendx'
 inputs:
+  title:
+    required: false
+    description: 'Extra text in brackets before version'
+    default: CHANGELOG
   slack_webhook_url: # change this
     required: true
     description: 'The webhook URL for the Slack channel'

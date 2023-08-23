@@ -34,6 +34,7 @@ jobs:
         uses: amendx/slackbot-release@1.0.0
         with:
           slack_webhook_url: ${{ secrets.SLACK_WEBHOOK_URL }}
+          title: ${{ github.repository }}
 ```
 
 <img width="973" alt="Github actions" src="https://user-images.githubusercontent.com/30783877/180820722-c5d5b438-b02f-4501-8da3-ed3e742563aa.png">
