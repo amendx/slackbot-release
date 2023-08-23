@@ -1,0 +1,26 @@
+name-template: '$RESOLVED_VERSION 🤖'
+commitish: main
+template: |
+  ## What’s Changed
+
+  $CHANGES
+
+categories:
+  - title: '🚀 Features'
+    label: 'feature'
+  - title: '🐛 Bug Fixes'
+    label: 'bug'
+  - title: '🏡 Chore'
+    label: 'chore'
+  - title: '🤓 Dependency Updates'
+    label: 'dependency'
+
+autolabeler:
+  - label: bug
+    branch: /bug(s)?\/.+/
+  - label: chore
+    branch: /chore\/.+/
+  - label: feature
+    branch: /feature\/.+/
+  - label: dependency
+    branch: /dependabot|dependency|renovate\/.+/
