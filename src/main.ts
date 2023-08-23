@@ -12,7 +12,8 @@ async function run(): Promise<void> {
     const context = github.context
     const {eventName, repo} = context
     if (eventName !== 'release') {
-      core.setFailed('Action should only be run on release publish events')
+      core.info('Action should only be run on release publish events')
+      return
     }
     const payload = context.payload as ReleaseReleasedEvent
     await notifyChangelog({
