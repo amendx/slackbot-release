@@ -24,7 +24,7 @@ post-checkout: &post-actions
         - rebase
         - merge
       run: git pull
-    yarn install:
+    npm install:
       run: npm install
 post-merge: *post-actions
 post-rewrite: *post-actions
